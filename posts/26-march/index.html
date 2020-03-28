@@ -1,0 +1,325 @@
+<!DOCTYPE html>
+<html><head>
+<title>Day 3: The Cursor&#39;s Lament</title>
+
+<meta charset="utf-8">
+<meta name="X-UA-Compatible" content="IE=edge">
+<meta name="google-site-verification" content="">
+<meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport">
+<meta content="telephone=no" name="format-detection">
+<meta name="description" content="第三天：光标的独白">
+<meta name="renderer" content="webkit">
+<meta name="theme-color" content="#ffffff">
+
+
+
+
+<script src="/vendor/js/jquery.min.js" ></script>
+<script src="/vendor/js/popper.min.js" ></script>
+<script src="/vendor/js/bootstrap.min.js" ></script>
+<script src="/vendor/js/smooth-scroll.polyfills.min.js" ></script>
+<link type="text/css" rel="stylesheet" href="/vendor/css/bootstrap.min.css">
+<script src="/vendor/js/vue.min.js" ></script>
+
+
+
+
+<link rel="stylesheet" href="https://johannabernatzky.github.io/scss/journal.min.5c667e74038e21ddbb9024b67930f8544e02af62491281cf73fdb817eec2947e.css" integrity="sha256-XGZ&#43;dAOOId27kCS2eTD4VE4Cr2JJEoHPc/24F&#43;7ClH4=" media="screen">
+
+<script src="https://johannabernatzky.github.io/js/loadCSS.js"></script>
+<script src="https://johannabernatzky.github.io/js/table.js"></script>
+
+
+<script src="https://johannabernatzky.github.io/js/toc.js"></script>
+
+
+<script>
+    loadCSS("https://fonts.googleapis.com/css?family=Lora|Montserrat|Fira+Mono|Noto+Serif+SC|Material+Icons");
+</script>
+
+
+
+
+
+
+</head><body>
+    	<div id="app"><div ref="sideContainer" class="side-container">
+    
+    <a class="a-block nav-head false" href="https://johannabernatzky.github.io">
+    
+        <div class="nav-title">
+            Quarantine Chronicles
+        </div>
+        
+        <div class="nav-subtitle">
+            疫时写译
+        </div>
+        
+    </a>
+
+    <div class="nav-link-list">
+        
+        
+            
+            
+            
+                
+            
+            
+            
+            <a class="a-block nav-link-item active" href="/posts">
+                Archive
+            </a>
+            
+        
+            
+            
+            
+            
+            
+            <a class="a-block nav-link-item false" href="/categories">
+                Categories
+            </a>
+            
+        
+            
+            
+            
+            
+            
+            <a class="a-block nav-link-item false" href="/tags">
+                Tags
+            </a>
+            
+        
+    </div>
+
+    
+
+    <div class="nav-footer">
+        
+Hugo Theme <a href="https://github.com/amazingrise/hugo-theme-diary">Diary</a> by <a href="https://amazingrise.net">Rise</a>
+<br>
+Ported from <a href="https://mak1t0.cc/" target="_blank" rel="noreferrer noopener">Makito</a>'s <a href="https://github.com/SumiMakito/hexo-theme-journal/" target="_blank" rel="noreferrer noopener">Journal.</a> <br>
+<br>
+
+&copy;
+	
+	Johanna 小贝 and Sophie 筱然 2020.
+	
+    </div>
+    
+</div><div ref="extraContainer" class="extra-container">
+    
+    <div class="toc animated-visibility" :class="{ invisible: scrollY <= 140 }">
+
+
+</div>
+    
+    <div class="pagination">
+        <a id="globalBackToTop" class="pagination-action animated-visibility" href="#top" :class="{ invisible: scrollY == 0 }">
+            <i class="material-icons pagination-action-icon">
+                keyboard_arrow_up
+            </i>
+        </a>
+        
+    </div>
+</div><div class="single-column-drawer-container" ref="drawer"
+     v-bind:class="{ 'single-column-drawer-container-active': isDrawerOpen }">
+    <div class="drawer-content">
+        <div class="drawer-menu">
+            
+            
+                
+                
+                
+                    
+                
+                
+                
+                <a class="a-block drawer-menu-item active" href="/posts">
+                    Archive
+                </a>
+                
+            
+                
+                
+                
+                
+                
+                <a class="a-block drawer-menu-item false" href="/categories">
+                    Categories
+                </a>
+                
+            
+                
+                
+                
+                
+                
+                <a class="a-block drawer-menu-item false" href="/tags">
+                    Tags
+                </a>
+                
+            
+            
+            <div class="toc">
+
+
+</div>
+            
+        </div>
+    </div>
+</div>
+<transition name="fade">
+    <div v-bind:class="{ 'single-column-drawer-mask': mounted }" v-if="isDrawerOpen" v-on:click="toggleDrawer"></div>
+</transition>
+<nav ref="navBar" class="navbar sticky-top navbar-light single-column-nav-container">
+    <div ref="navBackground" class="nav-background"></div>
+    <div class="container container-narrow nav-content">
+        <button id="nav_dropdown_btn" class="nav-dropdown-toggle" type="button" v-on:click="toggleDrawer">
+            <i class="material-icons">
+                menu
+            </i>
+        </button>
+        <a ref="navTitle" class="navbar-brand" href="https://johannabernatzky.github.io">
+            Quarantine Chronicles
+        </a>
+    </div>
+</nav>
+<div class="single-column-header-container" ref="pageHead"
+     v-bind:style="{ transform: 'translateZ(0px) translateY('+.3*scrollY+'px)', opacity: 1-navOpacity }">
+    <a href="https://johannabernatzky.github.io">
+        <div class="single-column-header-title">Quarantine Chronicles</div>
+        
+        <div class="single-column-header-subtitle">疫时写译</div>
+        
+
+    </a>
+</div>
+            <div id="content">
+<div ref="streamContainer" class="stream-container">
+    <div class="post-list-container post-list-container-shadow">
+        <div class="post">
+            
+            
+            
+                
+            
+
+            <div class="post-head-wrapper"
+                 style="background-image: url('/images/cursor.jpg')">
+                <div class="post-title">
+                    Day 3: The Cursor&#39;s Lament
+                    
+                    <div class="post-subtitle">
+                        第三天：光标的独白
+                    </div>
+                    
+                    <div class="post-meta">
+                        
+                        <time itemprop="datePublished">
+                            2020-03-26 18:00
+                        </time>
+                        
+
+                        
+                            <i class="material-icons" style="">folder</i>
+                                <a href="/categories/story">Story</a>
+                                &nbsp;
+                        
+
+                        
+                            <i class="material-icons" style="">label</i>
+                            
+                                <a href="/tags/written-by-johanna">written by Johanna</a>
+                                &nbsp;
+                            
+                                <a href="/tags/translated-by-sophie">translated by Sophie</a>
+                                &nbsp;
+                            
+                        
+                    </div>
+                </div>
+            </div>
+            
+            <div class="post-body-wrapper">
+                <div class="post-body">
+                    <p>Set your text to white and try freewriting in invisible mode.</p>
+<table>
+<thead>
+<tr>
+<th>English</th>
+<th>中文</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Where am I? Everything is bright, I have forgotten my past, I don’t know my future. All I have is now, an existence barely there. I am flickering in and out of consciousness. I feel something. A rhythm is driving me forwards. In and out and in and out. What am I running towards? My path leaves a squiggly line in the whiteness. It dances with me, closer closer closer and</td>
+<td>我到底身在何处？一切都如此刺眼，我不记得过往，前路未知。我只有当下，又几乎不存在 。我一直闪烁，没有意识。我有一些感觉，驱使我向前的节奏。飘忽不定。我向前的目标是什么？我在白色之处走过，留下曲折，不同寻常的痕迹。它和我一同舞动，近一点，更近一点，然后……</td>
+</tr>
+<tr>
+<td>Gone. Loneliness is a freeing thing. It has given me wings to soar, faster than I ever did before. What does it matter if I have no goal? I make my own pace, I light up your screen.</td>
+<td>消失。孤独实际是无拘无束的，赋予我飞翔的翅膀，让我飞得更快。即使我毫无目标，又如何呢？我有适合自己的步伐，我点亮了你的屏幕。</td>
+</tr>
+<tr>
+<td>Where am I going? I’ve left you a present, a painting almost. What does it look like to you? A sunset? Maybe a face? So many things look like faces if you try hard enough.</td>
+<td>我在去往何方？我已经给予你一份礼物，几乎是一副画作。你觉得它像什么？夕照？或许一张脸？如果你仔细看看，会发现许多像人脸的地方。</td>
+</tr>
+<tr>
+<td>I worry my story will have no end as it has no beginning. Remember me today.</td>
+<td>我担心我的故事没有结局，正如它没有开始一样。请记住今天的我。</td>
+</tr>
+</tbody>
+</table>
+<p>Image by Johanna.</p>
+
+                    
+                    <HR width="100%" id="EOF">
+                    <p style="color:#777;">Last modified on 2020-03-26</p>
+                    
+                </div>
+            </div>
+            
+            
+            <nav class="post-pagination">
+
+                
+                <a class="newer-posts" href="https://johannabernatzky.github.io/posts/3-yue-26/">
+                    Next<br>第三天：今天的挑战
+                </a>
+                
+                
+                
+                <a class="older-posts" href="https://johannabernatzky.github.io/posts/3-yue-25/">
+                    Previous<br>第二天：网红熊猫的诞生
+                </a>
+                
+            </nav>
+            <div class="post-comment-wrapper">
+                
+
+
+
+
+
+
+            </div>
+        </div>
+    </div>
+</div>
+
+            </div><div id="single-column-footer">
+Hugo Theme <a href="https://github.com/amazingrise/hugo-theme-diary">Diary</a> by <a href="https://amazingrise.net">Rise</a>
+<br>
+Ported from <a href="https://mak1t0.cc/" target="_blank" rel="noreferrer noopener">Makito</a>'s <a href="https://github.com/SumiMakito/hexo-theme-journal/" target="_blank" rel="noreferrer noopener">Journal.</a> <br>
+<br>
+
+&copy;
+	
+	Johanna 小贝 and Sophie 筱然 2020.
+	</div>
+    	</div>
+    <script src="https://johannabernatzky.github.io/js/journal.js"></script>
+    </body>
+</html>

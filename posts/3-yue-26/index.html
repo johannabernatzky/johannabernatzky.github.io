@@ -1,0 +1,329 @@
+<!DOCTYPE html>
+<html><head>
+<title>第三天：今天的挑战</title>
+
+<meta charset="utf-8">
+<meta name="X-UA-Compatible" content="IE=edge">
+<meta name="google-site-verification" content="">
+<meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport">
+<meta content="telephone=no" name="format-detection">
+<meta name="description" content="Day 3: Today">
+<meta name="renderer" content="webkit">
+<meta name="theme-color" content="#ffffff">
+
+
+
+
+<script src="/vendor/js/jquery.min.js" ></script>
+<script src="/vendor/js/popper.min.js" ></script>
+<script src="/vendor/js/bootstrap.min.js" ></script>
+<script src="/vendor/js/smooth-scroll.polyfills.min.js" ></script>
+<link type="text/css" rel="stylesheet" href="/vendor/css/bootstrap.min.css">
+<script src="/vendor/js/vue.min.js" ></script>
+
+
+
+
+<link rel="stylesheet" href="https://johannabernatzky.github.io/scss/journal.min.5c667e74038e21ddbb9024b67930f8544e02af62491281cf73fdb817eec2947e.css" integrity="sha256-XGZ&#43;dAOOId27kCS2eTD4VE4Cr2JJEoHPc/24F&#43;7ClH4=" media="screen">
+
+<script src="https://johannabernatzky.github.io/js/loadCSS.js"></script>
+<script src="https://johannabernatzky.github.io/js/table.js"></script>
+
+
+<script src="https://johannabernatzky.github.io/js/toc.js"></script>
+
+
+<script>
+    loadCSS("https://fonts.googleapis.com/css?family=Lora|Montserrat|Fira+Mono|Noto+Serif+SC|Material+Icons");
+</script>
+
+
+
+
+
+
+</head><body>
+    	<div id="app"><div ref="sideContainer" class="side-container">
+    
+    <a class="a-block nav-head false" href="https://johannabernatzky.github.io">
+    
+        <div class="nav-title">
+            Quarantine Chronicles
+        </div>
+        
+        <div class="nav-subtitle">
+            疫时写译
+        </div>
+        
+    </a>
+
+    <div class="nav-link-list">
+        
+        
+            
+            
+            
+                
+            
+            
+            
+            <a class="a-block nav-link-item active" href="/posts">
+                Archive
+            </a>
+            
+        
+            
+            
+            
+            
+            
+            <a class="a-block nav-link-item false" href="/categories">
+                Categories
+            </a>
+            
+        
+            
+            
+            
+            
+            
+            <a class="a-block nav-link-item false" href="/tags">
+                Tags
+            </a>
+            
+        
+    </div>
+
+    
+
+    <div class="nav-footer">
+        
+Hugo Theme <a href="https://github.com/amazingrise/hugo-theme-diary">Diary</a> by <a href="https://amazingrise.net">Rise</a>
+<br>
+Ported from <a href="https://mak1t0.cc/" target="_blank" rel="noreferrer noopener">Makito</a>'s <a href="https://github.com/SumiMakito/hexo-theme-journal/" target="_blank" rel="noreferrer noopener">Journal.</a> <br>
+<br>
+
+&copy;
+	
+	Johanna 小贝 and Sophie 筱然 2020.
+	
+    </div>
+    
+</div><div ref="extraContainer" class="extra-container">
+    
+    <div class="toc animated-visibility" :class="{ invisible: scrollY <= 140 }">
+
+
+</div>
+    
+    <div class="pagination">
+        <a id="globalBackToTop" class="pagination-action animated-visibility" href="#top" :class="{ invisible: scrollY == 0 }">
+            <i class="material-icons pagination-action-icon">
+                keyboard_arrow_up
+            </i>
+        </a>
+        
+    </div>
+</div><div class="single-column-drawer-container" ref="drawer"
+     v-bind:class="{ 'single-column-drawer-container-active': isDrawerOpen }">
+    <div class="drawer-content">
+        <div class="drawer-menu">
+            
+            
+                
+                
+                
+                    
+                
+                
+                
+                <a class="a-block drawer-menu-item active" href="/posts">
+                    Archive
+                </a>
+                
+            
+                
+                
+                
+                
+                
+                <a class="a-block drawer-menu-item false" href="/categories">
+                    Categories
+                </a>
+                
+            
+                
+                
+                
+                
+                
+                <a class="a-block drawer-menu-item false" href="/tags">
+                    Tags
+                </a>
+                
+            
+            
+            <div class="toc">
+
+
+</div>
+            
+        </div>
+    </div>
+</div>
+<transition name="fade">
+    <div v-bind:class="{ 'single-column-drawer-mask': mounted }" v-if="isDrawerOpen" v-on:click="toggleDrawer"></div>
+</transition>
+<nav ref="navBar" class="navbar sticky-top navbar-light single-column-nav-container">
+    <div ref="navBackground" class="nav-background"></div>
+    <div class="container container-narrow nav-content">
+        <button id="nav_dropdown_btn" class="nav-dropdown-toggle" type="button" v-on:click="toggleDrawer">
+            <i class="material-icons">
+                menu
+            </i>
+        </button>
+        <a ref="navTitle" class="navbar-brand" href="https://johannabernatzky.github.io">
+            Quarantine Chronicles
+        </a>
+    </div>
+</nav>
+<div class="single-column-header-container" ref="pageHead"
+     v-bind:style="{ transform: 'translateZ(0px) translateY('+.3*scrollY+'px)', opacity: 1-navOpacity }">
+    <a href="https://johannabernatzky.github.io">
+        <div class="single-column-header-title">Quarantine Chronicles</div>
+        
+        <div class="single-column-header-subtitle">疫时写译</div>
+        
+
+    </a>
+</div>
+            <div id="content">
+<div ref="streamContainer" class="stream-container">
+    <div class="post-list-container post-list-container-shadow">
+        <div class="post">
+            
+            
+            
+                
+            
+
+            <div class="post-head-wrapper"
+                 style="background-image: url('/images/bloodcells.jpg')">
+                <div class="post-title">
+                    第三天：今天的挑战
+                    
+                    <div class="post-subtitle">
+                        Day 3: Today
+                    </div>
+                    
+                    <div class="post-meta">
+                        
+                        <time itemprop="datePublished">
+                            2020-03-26 18:45
+                        </time>
+                        
+
+                        
+                            <i class="material-icons" style="">folder</i>
+                                <a href="/categories/story">Story</a>
+                                &nbsp;
+                        
+
+                        
+                            <i class="material-icons" style="">label</i>
+                            
+                                <a href="/tags/written-by-sophie">written by Sophie</a>
+                                &nbsp;
+                            
+                                <a href="/tags/translated-by-johanna">translated by Johanna</a>
+                                &nbsp;
+                            
+                        
+                    </div>
+                </div>
+            </div>
+            
+            <div class="post-body-wrapper">
+                <div class="post-body">
+                    <p>Set your text to white and try freewriting in invisible mode.</p>
+<table>
+<thead>
+<tr>
+<th>中文</th>
+<th>English</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>今天的新挑战，把字体颜色调成白色进行记录，无法看到自己打的是什么字，总之就这样一直码字码下去，但是偶尔出现的蓝色红色波浪线像是举着牌子表示这里有点可疑！</td>
+<td>Today’s challenge is to set your font to white and type. This way you can’t see what you’re typing, letter after letter you put in, only the odd blue and red line pops up like a warning sign, you’ve typed something suspicious here!</td>
+</tr>
+<tr>
+<td>有一部日本动画《工作细胞》讲述了人类身体里面运作的各类细胞，这部动画以一种很可爱的方式给我们科普。里面的细胞形象都非常可爱。原来人体里面有那么多的细胞在努力工作，我们的身体才能够好好的运作。</td>
+<td>“Cells at Work” is an anime series about the work all the little cells in our bodies do. A cutesified scientific education. All the cells in it are adorable. All these cells in our bodies have to work hard for our bodies to run smoothly.</td>
+</tr>
+<tr>
+<td>记得有次朋友说，“看到那些细胞这么努力，会特别想要好好的爱护自己。剧集里面，人的身体出现些小小的问题，不小心划破皮，里面的细胞们仿佛都处于一种遇到极端自然灾害一样，努力地在细菌入侵的，有些破损的世界里活下来，然后好好重建家园。原来自己能够活着是需要那么多的支持呀。有种自己并不孤独的感觉，想要和大家（细胞们）一起加油，好好地生活！”</td>
+<td>A friend once said to me, “Seeing all these cells work hard for me makes me want to take care of myself. It might only be a small problem for a human, a little scratch for example, but for the cells in the show it’s a natural disaster. They have to survive bacteria attacks and world-shattering destruction, and then rebuild their home. And all this just for a human to live. It makes me feel like I’m not alone, like I want to join forces with them and live a good life!”</td>
+</tr>
+<tr>
+<td>今天也不知怎么突然就想起了这部动画片，想和大家分享。其实我白天还在读张爱玲的散文随笔，和这部动画片并没有太大的关系呢。</td>
+<td>Today I thought about this anime and wanted to share it with everybody. I was reading Zhang Eileen’s essays earlier, but they don’t really have anything in common with this cartoon.</td>
+</tr>
+<tr>
+<td>这两天小贝很认真地把我们的博客做好了，记录21世纪第三个十年的开端的，一场疫情下的生活。我们的生活也因为这突如其来的新冠病毒发生了改变：更加谨慎的卫生习惯，前所未有的居家隔离，和保持两米的社交距离。不知道若干年后，未来的世代某天翻到我们的博客，读到我们写和译的内容会是什么样的感受呢？2020年开年的三个多月以来，我多次体会到“世事难料”，放两个月前，我完全不会想象到之后自己会在安静的德国乡村里和好友一家过着预设隔绝的隔离生活，但问题不大，日子还是很开心的。</td>
+<td>Johanna has been working hard on our blog to report on our lives under quarantine at the outset of the third decade of the 21st century. Our lives have turned upside down because of this new virus: stricter hygiene measures, unprecedented isolation at home, two metres of social distance. I wonder what people will think if they discover our blog years into the future. These first three months of 2020 have been full of didn’t see that comings. Two months ago I couldn’t have imagined I would be here in this quiet German village in complete isolation with my friend and her family. It’s no problem though, life is good.</td>
+</tr>
+</tbody>
+</table>
+<p>Image by allinonemovie from Pixabay.</p>
+
+                    
+                    <HR width="100%" id="EOF">
+                    <p style="color:#777;">Last modified on 2020-03-26</p>
+                    
+                </div>
+            </div>
+            
+            
+            <nav class="post-pagination">
+
+                
+                <a class="newer-posts">
+                    Next<br>No newer posts.
+                </a>
+                
+                
+                
+                <a class="older-posts" href="https://johannabernatzky.github.io/posts/26-march/">
+                    Previous<br>Day 3: The Cursor&#39;s Lament
+                </a>
+                
+            </nav>
+            <div class="post-comment-wrapper">
+                
+
+
+
+
+
+
+            </div>
+        </div>
+    </div>
+</div>
+
+            </div><div id="single-column-footer">
+Hugo Theme <a href="https://github.com/amazingrise/hugo-theme-diary">Diary</a> by <a href="https://amazingrise.net">Rise</a>
+<br>
+Ported from <a href="https://mak1t0.cc/" target="_blank" rel="noreferrer noopener">Makito</a>'s <a href="https://github.com/SumiMakito/hexo-theme-journal/" target="_blank" rel="noreferrer noopener">Journal.</a> <br>
+<br>
+
+&copy;
+	
+	Johanna 小贝 and Sophie 筱然 2020.
+	</div>
+    	</div>
+    <script src="https://johannabernatzky.github.io/js/journal.js"></script>
+    </body>
+</html>

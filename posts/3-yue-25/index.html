@@ -1,0 +1,333 @@
+<!DOCTYPE html>
+<html><head>
+<title>第二天：网红熊猫的诞生</title>
+
+<meta charset="utf-8">
+<meta name="X-UA-Compatible" content="IE=edge">
+<meta name="google-site-verification" content="">
+<meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport">
+<meta content="telephone=no" name="format-detection">
+<meta name="description" content="Day 2: The Birth of Miss Panda">
+<meta name="renderer" content="webkit">
+<meta name="theme-color" content="#ffffff">
+
+
+
+
+<script src="/vendor/js/jquery.min.js" ></script>
+<script src="/vendor/js/popper.min.js" ></script>
+<script src="/vendor/js/bootstrap.min.js" ></script>
+<script src="/vendor/js/smooth-scroll.polyfills.min.js" ></script>
+<link type="text/css" rel="stylesheet" href="/vendor/css/bootstrap.min.css">
+<script src="/vendor/js/vue.min.js" ></script>
+
+
+
+
+<link rel="stylesheet" href="https://johannabernatzky.github.io/scss/journal.min.5c667e74038e21ddbb9024b67930f8544e02af62491281cf73fdb817eec2947e.css" integrity="sha256-XGZ&#43;dAOOId27kCS2eTD4VE4Cr2JJEoHPc/24F&#43;7ClH4=" media="screen">
+
+<script src="https://johannabernatzky.github.io/js/loadCSS.js"></script>
+<script src="https://johannabernatzky.github.io/js/table.js"></script>
+
+
+<script src="https://johannabernatzky.github.io/js/toc.js"></script>
+
+
+<script>
+    loadCSS("https://fonts.googleapis.com/css?family=Lora|Montserrat|Fira+Mono|Noto+Serif+SC|Material+Icons");
+</script>
+
+
+
+
+
+
+</head><body>
+    	<div id="app"><div ref="sideContainer" class="side-container">
+    
+    <a class="a-block nav-head false" href="https://johannabernatzky.github.io">
+    
+        <div class="nav-title">
+            Quarantine Chronicles
+        </div>
+        
+        <div class="nav-subtitle">
+            疫时写译
+        </div>
+        
+    </a>
+
+    <div class="nav-link-list">
+        
+        
+            
+            
+            
+                
+            
+            
+            
+            <a class="a-block nav-link-item active" href="/posts">
+                Archive
+            </a>
+            
+        
+            
+            
+            
+            
+            
+            <a class="a-block nav-link-item false" href="/categories">
+                Categories
+            </a>
+            
+        
+            
+            
+            
+            
+            
+            <a class="a-block nav-link-item false" href="/tags">
+                Tags
+            </a>
+            
+        
+    </div>
+
+    
+
+    <div class="nav-footer">
+        
+Hugo Theme <a href="https://github.com/amazingrise/hugo-theme-diary">Diary</a> by <a href="https://amazingrise.net">Rise</a>
+<br>
+Ported from <a href="https://mak1t0.cc/" target="_blank" rel="noreferrer noopener">Makito</a>'s <a href="https://github.com/SumiMakito/hexo-theme-journal/" target="_blank" rel="noreferrer noopener">Journal.</a> <br>
+<br>
+
+&copy;
+	
+	Johanna 小贝 and Sophie 筱然 2020.
+	
+    </div>
+    
+</div><div ref="extraContainer" class="extra-container">
+    
+    <div class="toc animated-visibility" :class="{ invisible: scrollY <= 140 }">
+
+
+</div>
+    
+    <div class="pagination">
+        <a id="globalBackToTop" class="pagination-action animated-visibility" href="#top" :class="{ invisible: scrollY == 0 }">
+            <i class="material-icons pagination-action-icon">
+                keyboard_arrow_up
+            </i>
+        </a>
+        
+    </div>
+</div><div class="single-column-drawer-container" ref="drawer"
+     v-bind:class="{ 'single-column-drawer-container-active': isDrawerOpen }">
+    <div class="drawer-content">
+        <div class="drawer-menu">
+            
+            
+                
+                
+                
+                    
+                
+                
+                
+                <a class="a-block drawer-menu-item active" href="/posts">
+                    Archive
+                </a>
+                
+            
+                
+                
+                
+                
+                
+                <a class="a-block drawer-menu-item false" href="/categories">
+                    Categories
+                </a>
+                
+            
+                
+                
+                
+                
+                
+                <a class="a-block drawer-menu-item false" href="/tags">
+                    Tags
+                </a>
+                
+            
+            
+            <div class="toc">
+
+
+</div>
+            
+        </div>
+    </div>
+</div>
+<transition name="fade">
+    <div v-bind:class="{ 'single-column-drawer-mask': mounted }" v-if="isDrawerOpen" v-on:click="toggleDrawer"></div>
+</transition>
+<nav ref="navBar" class="navbar sticky-top navbar-light single-column-nav-container">
+    <div ref="navBackground" class="nav-background"></div>
+    <div class="container container-narrow nav-content">
+        <button id="nav_dropdown_btn" class="nav-dropdown-toggle" type="button" v-on:click="toggleDrawer">
+            <i class="material-icons">
+                menu
+            </i>
+        </button>
+        <a ref="navTitle" class="navbar-brand" href="https://johannabernatzky.github.io">
+            Quarantine Chronicles
+        </a>
+    </div>
+</nav>
+<div class="single-column-header-container" ref="pageHead"
+     v-bind:style="{ transform: 'translateZ(0px) translateY('+.3*scrollY+'px)', opacity: 1-navOpacity }">
+    <a href="https://johannabernatzky.github.io">
+        <div class="single-column-header-title">Quarantine Chronicles</div>
+        
+        <div class="single-column-header-subtitle">疫时写译</div>
+        
+
+    </a>
+</div>
+            <div id="content">
+<div ref="streamContainer" class="stream-container">
+    <div class="post-list-container post-list-container-shadow">
+        <div class="post">
+            
+            
+            
+                
+            
+
+            <div class="post-head-wrapper"
+                 style="background-image: url('/images/panda.jpg')">
+                <div class="post-title">
+                    第二天：网红熊猫的诞生
+                    
+                    <div class="post-subtitle">
+                        Day 2: The Birth of Miss Panda
+                    </div>
+                    
+                    <div class="post-meta">
+                        
+                        <time itemprop="datePublished">
+                            2020-03-25 18:01
+                        </time>
+                        
+
+                        
+                            <i class="material-icons" style="">folder</i>
+                                <a href="/categories/story">Story</a>
+                                &nbsp;
+                        
+
+                        
+                            <i class="material-icons" style="">label</i>
+                            
+                                <a href="/tags/written-by-sophie">written by Sophie</a>
+                                &nbsp;
+                            
+                                <a href="/tags/translated-by-johanna">translated by Johanna</a>
+                                &nbsp;
+                            
+                        
+                    </div>
+                </div>
+            </div>
+            
+            <div class="post-body-wrapper">
+                <div class="post-body">
+                    <p>Pick 5 words at random from different blog posts, tweets, or articles and use them all in a scene. 熊猫、烦躁、郁金香、早饭、月球. Panda, annoyed, tulip, breakfast, moon.</p>
+<table>
+<thead>
+<tr>
+<th>中文</th>
+<th>English</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>胖达是一只毛茸茸的熊猫，她生活在文化多元的伦敦。胖达偶尔不是那么有耐心，一旦要排队挤地铁，她就会有点烦躁。</td>
+<td>In the cultured city of London lives a cuddly panda. She goes by Panda. A bit impatient, queuing for the tube often annoys her.</td>
+</tr>
+<tr>
+<td>胖达在伦敦最大的动物园工作，一到动物园她就会和其他员工一样打卡签到。与其他工作人员不同的是，签到之后，胖达就会进入到熊猫馆，在那里待上大半天。她的工作就是向人们展示普通熊猫的生活，在熊猫馆里面和其他熊猫朋友嬉戏打闹，啃啃竹子，吃吃水果，玩累了就睡个觉，到了下班时间就离馆回家。然而，胖达偶尔有些小郁闷，担心在动物园里向人类展示的熊猫生活会加深人们对熊猫的刻板印象，因为在现代社会里，熊猫除了吃喝玩乐，享受生活之外，还是有很多追求的，而胖达无法在动物园里展示熊猫生活的另一面。</td>
+<td>Panda works in the biggest zoo in London. When she arrives for work, she swipes in just like her co-workers. But unlike them, after swiping in she makes a beeline for the panda pavilion where she spends her day. Her job is to show visitors a panda’s daily life. She plays around with her panda friends inside the enclosure, she chews on bambus, munches on fruit and takes naps when she’s exhausted. When the zoo closes, she says goodbye to the enclosure and goes home. Sometimes Panda gets a little worried that her work at the zoo only solidifies people’s misconceptions. In reality, besides the simple pleasures of eating and playing, pandas nowadays have their own dreams. But from within the enclosure, Panda has no way of making them see.</td>
+</tr>
+<tr>
+<td>胖达吃早饭时有一个新想法，就是去开一个Instagram账号，发布一些真正的熊猫生活动态，让更多人了解真实的熊猫生活，改变人们对熊猫的刻板印象。毕竟全世界有那么多人喜欢毛茸茸的熊猫，也愿意花钱到动物园里围观他们嘛！胖达开始认真计划要发布什么内容，写什么样的文案，与粉丝们分享一些什么样的心得。胖达想到未来自己可能会成为网红，拥有更大的影响力，那到时候她说不准能够实现小时候的心愿—成为一位服装设计师，设计和发布含有熊猫元素的服饰。啊，说不准未来还会有人为她拍摄专门的纪录片呢！啊，说不定她能靠Instagram发家致富呢！等有钱之后，胖达还可以实现她去月球度假的小心愿呢！胖达越想越激动，便马上申请了一个新的Instagram账号，名为Miss Panda，并决定使用中英文同时更新。</td>
+<td>One day over breakfast, Panda has an idea. Why not open an Instagram account to share the true life of a panda? Once people see what pandas truly get up to, surely they will understand. These masses of people who flood to the zoos to see their beloved fluffy pandas, they will want to learn. So Panda starts to plan out her posts, writes out captions, lays out what she wants to share with her fans. Maybe one day she will become an influencer, an online celebrity! Maybe she will finally become a fashion designer like she has always dreamed, bring her panda-inspired designs to life! Maybe one day she will feature in a documentary! Maybe Instagram will make her rich! Rich enough to travel to the moon even! Taken by a wave of excitement, Panda immediately signs up to Instagram: Miss Panda is born, an account run in both Chinese and English.</td>
+</tr>
+<tr>
+<td>第一条贴文发布什么好呢？胖达一边吃着吐司，一边沉思。</td>
+<td>What should her first post be? Panda deliberates over toast.</td>
+</tr>
+<tr>
+<td>春天快到了，荷兰的郁金香应该也开了，那她不如到郁金香花田里拍摄一组春天主题的照片，应该会很可爱的。今年欧洲各国都颁布了旅游禁令，荷兰估计是去不成了，但问题不大。胖达去年到过荷兰的郁金香花田，也拍了许多满意的照片，那就用去年的照片吧。</td>
+<td>It will be spring soon, the tulips will be blooming in Holland. So why not visit the tulip fields for a photo shoot? It will make for an adorable scene. But no, the entirety of Europe is under a travel ban, Holland included. Panda is quick on her paws, remembering she still has pictures from last year’s tulip trip to Holland. She will just use one of them.</td>
+</tr>
+<tr>
+<td>2020年3月25日，熊猫第一网红胖达女士发布了第一条Instagram贴文，从此开启了她的网红生涯。</td>
+<td>On the 25th of March 2020, Miss Panda publishes her first Instagram post. A star is born.</td>
+</tr>
+</tbody>
+</table>
+<p>Image by Cimberley from Pixabay.</p>
+
+                    
+                    <HR width="100%" id="EOF">
+                    <p style="color:#777;">Last modified on 2020-03-25</p>
+                    
+                </div>
+            </div>
+            
+            
+            <nav class="post-pagination">
+
+                
+                <a class="newer-posts" href="https://johannabernatzky.github.io/posts/26-march/">
+                    Next<br>Day 3: The Cursor&#39;s Lament
+                </a>
+                
+                
+                
+                <a class="older-posts" href="https://johannabernatzky.github.io/posts/25-march/">
+                    Previous<br>Day 2: Behind the Waterfall
+                </a>
+                
+            </nav>
+            <div class="post-comment-wrapper">
+                
+
+
+
+
+
+
+            </div>
+        </div>
+    </div>
+</div>
+
+            </div><div id="single-column-footer">
+Hugo Theme <a href="https://github.com/amazingrise/hugo-theme-diary">Diary</a> by <a href="https://amazingrise.net">Rise</a>
+<br>
+Ported from <a href="https://mak1t0.cc/" target="_blank" rel="noreferrer noopener">Makito</a>'s <a href="https://github.com/SumiMakito/hexo-theme-journal/" target="_blank" rel="noreferrer noopener">Journal.</a> <br>
+<br>
+
+&copy;
+	
+	Johanna 小贝 and Sophie 筱然 2020.
+	</div>
+    	</div>
+    <script src="https://johannabernatzky.github.io/js/journal.js"></script>
+    </body>
+</html>

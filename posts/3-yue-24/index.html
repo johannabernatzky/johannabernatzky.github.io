@@ -1,0 +1,325 @@
+<!DOCTYPE html>
+<html><head>
+<title>第一天：闭门保命的日子</title>
+
+<meta charset="utf-8">
+<meta name="X-UA-Compatible" content="IE=edge">
+<meta name="google-site-verification" content="">
+<meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport">
+<meta content="telephone=no" name="format-detection">
+<meta name="description" content="Day 1: The Lockdown">
+<meta name="renderer" content="webkit">
+<meta name="theme-color" content="#ffffff">
+
+
+
+
+<script src="/vendor/js/jquery.min.js" ></script>
+<script src="/vendor/js/popper.min.js" ></script>
+<script src="/vendor/js/bootstrap.min.js" ></script>
+<script src="/vendor/js/smooth-scroll.polyfills.min.js" ></script>
+<link type="text/css" rel="stylesheet" href="/vendor/css/bootstrap.min.css">
+<script src="/vendor/js/vue.min.js" ></script>
+
+
+
+
+<link rel="stylesheet" href="https://johannabernatzky.github.io/scss/journal.min.5c667e74038e21ddbb9024b67930f8544e02af62491281cf73fdb817eec2947e.css" integrity="sha256-XGZ&#43;dAOOId27kCS2eTD4VE4Cr2JJEoHPc/24F&#43;7ClH4=" media="screen">
+
+<script src="https://johannabernatzky.github.io/js/loadCSS.js"></script>
+<script src="https://johannabernatzky.github.io/js/table.js"></script>
+
+
+<script src="https://johannabernatzky.github.io/js/toc.js"></script>
+
+
+<script>
+    loadCSS("https://fonts.googleapis.com/css?family=Lora|Montserrat|Fira+Mono|Noto+Serif+SC|Material+Icons");
+</script>
+
+
+
+
+
+
+</head><body>
+    	<div id="app"><div ref="sideContainer" class="side-container">
+    
+    <a class="a-block nav-head false" href="https://johannabernatzky.github.io">
+    
+        <div class="nav-title">
+            Quarantine Chronicles
+        </div>
+        
+        <div class="nav-subtitle">
+            疫时写译
+        </div>
+        
+    </a>
+
+    <div class="nav-link-list">
+        
+        
+            
+            
+            
+                
+            
+            
+            
+            <a class="a-block nav-link-item active" href="/posts">
+                Archive
+            </a>
+            
+        
+            
+            
+            
+            
+            
+            <a class="a-block nav-link-item false" href="/categories">
+                Categories
+            </a>
+            
+        
+            
+            
+            
+            
+            
+            <a class="a-block nav-link-item false" href="/tags">
+                Tags
+            </a>
+            
+        
+    </div>
+
+    
+
+    <div class="nav-footer">
+        
+Hugo Theme <a href="https://github.com/amazingrise/hugo-theme-diary">Diary</a> by <a href="https://amazingrise.net">Rise</a>
+<br>
+Ported from <a href="https://mak1t0.cc/" target="_blank" rel="noreferrer noopener">Makito</a>'s <a href="https://github.com/SumiMakito/hexo-theme-journal/" target="_blank" rel="noreferrer noopener">Journal.</a> <br>
+<br>
+
+&copy;
+	
+	Johanna 小贝 and Sophie 筱然 2020.
+	
+    </div>
+    
+</div><div ref="extraContainer" class="extra-container">
+    
+    <div class="toc animated-visibility" :class="{ invisible: scrollY <= 140 }">
+
+
+</div>
+    
+    <div class="pagination">
+        <a id="globalBackToTop" class="pagination-action animated-visibility" href="#top" :class="{ invisible: scrollY == 0 }">
+            <i class="material-icons pagination-action-icon">
+                keyboard_arrow_up
+            </i>
+        </a>
+        
+    </div>
+</div><div class="single-column-drawer-container" ref="drawer"
+     v-bind:class="{ 'single-column-drawer-container-active': isDrawerOpen }">
+    <div class="drawer-content">
+        <div class="drawer-menu">
+            
+            
+                
+                
+                
+                    
+                
+                
+                
+                <a class="a-block drawer-menu-item active" href="/posts">
+                    Archive
+                </a>
+                
+            
+                
+                
+                
+                
+                
+                <a class="a-block drawer-menu-item false" href="/categories">
+                    Categories
+                </a>
+                
+            
+                
+                
+                
+                
+                
+                <a class="a-block drawer-menu-item false" href="/tags">
+                    Tags
+                </a>
+                
+            
+            
+            <div class="toc">
+
+
+</div>
+            
+        </div>
+    </div>
+</div>
+<transition name="fade">
+    <div v-bind:class="{ 'single-column-drawer-mask': mounted }" v-if="isDrawerOpen" v-on:click="toggleDrawer"></div>
+</transition>
+<nav ref="navBar" class="navbar sticky-top navbar-light single-column-nav-container">
+    <div ref="navBackground" class="nav-background"></div>
+    <div class="container container-narrow nav-content">
+        <button id="nav_dropdown_btn" class="nav-dropdown-toggle" type="button" v-on:click="toggleDrawer">
+            <i class="material-icons">
+                menu
+            </i>
+        </button>
+        <a ref="navTitle" class="navbar-brand" href="https://johannabernatzky.github.io">
+            Quarantine Chronicles
+        </a>
+    </div>
+</nav>
+<div class="single-column-header-container" ref="pageHead"
+     v-bind:style="{ transform: 'translateZ(0px) translateY('+.3*scrollY+'px)', opacity: 1-navOpacity }">
+    <a href="https://johannabernatzky.github.io">
+        <div class="single-column-header-title">Quarantine Chronicles</div>
+        
+        <div class="single-column-header-subtitle">疫时写译</div>
+        
+
+    </a>
+</div>
+            <div id="content">
+<div ref="streamContainer" class="stream-container">
+    <div class="post-list-container post-list-container-shadow">
+        <div class="post">
+            
+            
+            
+                
+            
+
+            <div class="post-head-wrapper"
+                 style="background-image: url('/images/vegetables.jpg')">
+                <div class="post-title">
+                    第一天：闭门保命的日子
+                    
+                    <div class="post-subtitle">
+                        Day 1: The Lockdown
+                    </div>
+                    
+                    <div class="post-meta">
+                        
+                        <time itemprop="datePublished">
+                            2020-03-24 16:30
+                        </time>
+                        
+
+                        
+                            <i class="material-icons" style="">folder</i>
+                                <a href="/categories/story">Story</a>
+                                &nbsp;
+                        
+
+                        
+                            <i class="material-icons" style="">label</i>
+                            
+                                <a href="/tags/written-by-sophie">written by Sophie</a>
+                                &nbsp;
+                            
+                                <a href="/tags/translated-by-johanna">translated by Johanna</a>
+                                &nbsp;
+                            
+                        
+                    </div>
+                </div>
+            </div>
+            
+            <div class="post-body-wrapper">
+                <div class="post-body">
+                    <p>Write about a character who's stuck inside. How do they feel about it? Why are they there?</p>
+<table>
+<thead>
+<tr>
+<th>中文</th>
+<th>English</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>近日，一种丧尸病毒席卷欧洲，活人若是遭到丧尸啃咬，轻则收点皮肉伤，加以治疗，仍能恢复过上正常生活，重则失去自由意志，成为胡乱咬人丧尸部队一员。为了群众避免无辜受伤，各国政府进入紧急状态，宣布宵禁措施，限制公民活动。</td>
+<td>A zombie virus is spreading around Europe. A bite that only barely breaks the skin can be treated and the victims continue their lives as before, the severe bites however bleed out a person’s free will and force them into the ranks of ravaging zombies. To protect their people from harm, governments have called out a state of emergency and put their citizens on lockdown.</td>
+</tr>
+<tr>
+<td>但说来也奇怪，所谓“一物降一物”。丧尸病毒纵然可怕，但也是有克星的——它们极度害怕绿色蔬菜。据说，有位菜农在送菜时遭遇一群丧尸袭击，幸好他车上的绿菜多，吓得死亡大队仓皇而逃。此事一上新闻，便引发了绿色蔬菜的抢购热潮，如今超市里可是一菜难求。买不到菜怎么办？</td>
+<td>But as paper beats rock, rock beats scissors and scissors beats paper, the zombies are not invincible. In all their horror, they have a weakness – they wither at the sight of green vegetables. It is rumoured that a farmer ambushed by zombies on a delivery run showed his attackers a sight of his truck full of greens imposing enough to scatter them to the four winds. As this became public knowledge, a stockpiling frenzy set in, clearing supermarket shelves clean of any trace of green.</td>
+</tr>
+<tr>
+<td>求生欲总会驱使人自己种菜保命，凯丽就是买不到菜的人，她只能躲在家里自己种菜保命。绿色蔬菜的生长周期也不短，但好在她前几天在园艺商店里买到了几盆已经发芽的白菜苗，再加上凯丽一个月前开始尝试种植沙拉菜，目前她的菜苗数量充裕，若非到规模庞大的丧尸队伍，她的小菜苗是能够保护她的。</td>
+<td>Survival instinct still drives people, those who can grow their own vegetables for protection. Not having been able to buy any vegetables, Kelly has locked herself in at home and is growing her own. Green vegetables take their time to grow, but Kelly still has freshly sprouting cabbage seedlings from the gardening centre, and a month ago she planted her first salad seeds. She has enough vegetable shoots and seedlings to last her through an attack, provided she is not overrun by a hoard.</td>
+</tr>
+<tr>
+<td>凯丽盯着花园中的一盆盆嫩绿小菜苗，思绪万千，没想到她这么爱往外跑的一个人，竟快一个月未出过门了，全是靠着去年“黑五”打折，不小心按错数量，购入的20袋意大利面存活下来的。过去一个月，她利用家中能用的一切食材，努力尝试新的食谱，为在家躲避灾难的独居生活增添一丝光彩。凯丽心中感叹，这场灾难结束后，她可是好几个月都不想再吃意粉了。</td>
+<td>In her garden, Kelly stands and watches over the rows of translucent green seedlings. She hasn’t left her home in almost a month, she who so loved to go on adventures. For sustenance she only has the 20 packs of spaghetti she accidentally added to her cart last year on Black Friday. For a month now, she has used all the ingredients she could find in her home, combining them into new recipes for a little splash of colour in her solitary confinement. Kelly sighs. After this is all over, she will give spaghetti a wide berth for a few months.</td>
+</tr>
+</tbody>
+</table>
+<p>Image by Jill Wellington from Pixabay.</p>
+
+                    
+                    <HR width="100%" id="EOF">
+                    <p style="color:#777;">Last modified on 2020-03-24</p>
+                    
+                </div>
+            </div>
+            
+            
+            <nav class="post-pagination">
+
+                
+                <a class="newer-posts" href="https://johannabernatzky.github.io/posts/25-march/">
+                    Next<br>Day 2: Behind the Waterfall
+                </a>
+                
+                
+                
+                <a class="older-posts" href="https://johannabernatzky.github.io/posts/24-march/">
+                    Previous<br>Day 1: But Why Can&#39;t I Go Out?
+                </a>
+                
+            </nav>
+            <div class="post-comment-wrapper">
+                
+
+
+
+
+
+
+            </div>
+        </div>
+    </div>
+</div>
+
+            </div><div id="single-column-footer">
+Hugo Theme <a href="https://github.com/amazingrise/hugo-theme-diary">Diary</a> by <a href="https://amazingrise.net">Rise</a>
+<br>
+Ported from <a href="https://mak1t0.cc/" target="_blank" rel="noreferrer noopener">Makito</a>'s <a href="https://github.com/SumiMakito/hexo-theme-journal/" target="_blank" rel="noreferrer noopener">Journal.</a> <br>
+<br>
+
+&copy;
+	
+	Johanna 小贝 and Sophie 筱然 2020.
+	</div>
+    	</div>
+    <script src="https://johannabernatzky.github.io/js/journal.js"></script>
+    </body>
+</html>

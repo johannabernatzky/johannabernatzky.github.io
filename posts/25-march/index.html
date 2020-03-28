@@ -1,0 +1,321 @@
+<!DOCTYPE html>
+<html><head>
+<title>Day 2: Behind the Waterfall</title>
+
+<meta charset="utf-8">
+<meta name="X-UA-Compatible" content="IE=edge">
+<meta name="google-site-verification" content="">
+<meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport">
+<meta content="telephone=no" name="format-detection">
+<meta name="description" content="第二天：水帘秘境">
+<meta name="renderer" content="webkit">
+<meta name="theme-color" content="#ffffff">
+
+
+
+
+<script src="/vendor/js/jquery.min.js" ></script>
+<script src="/vendor/js/popper.min.js" ></script>
+<script src="/vendor/js/bootstrap.min.js" ></script>
+<script src="/vendor/js/smooth-scroll.polyfills.min.js" ></script>
+<link type="text/css" rel="stylesheet" href="/vendor/css/bootstrap.min.css">
+<script src="/vendor/js/vue.min.js" ></script>
+
+
+
+
+<link rel="stylesheet" href="https://johannabernatzky.github.io/scss/journal.min.5c667e74038e21ddbb9024b67930f8544e02af62491281cf73fdb817eec2947e.css" integrity="sha256-XGZ&#43;dAOOId27kCS2eTD4VE4Cr2JJEoHPc/24F&#43;7ClH4=" media="screen">
+
+<script src="https://johannabernatzky.github.io/js/loadCSS.js"></script>
+<script src="https://johannabernatzky.github.io/js/table.js"></script>
+
+
+<script src="https://johannabernatzky.github.io/js/toc.js"></script>
+
+
+<script>
+    loadCSS("https://fonts.googleapis.com/css?family=Lora|Montserrat|Fira+Mono|Noto+Serif+SC|Material+Icons");
+</script>
+
+
+
+
+
+
+</head><body>
+    	<div id="app"><div ref="sideContainer" class="side-container">
+    
+    <a class="a-block nav-head false" href="https://johannabernatzky.github.io">
+    
+        <div class="nav-title">
+            Quarantine Chronicles
+        </div>
+        
+        <div class="nav-subtitle">
+            疫时写译
+        </div>
+        
+    </a>
+
+    <div class="nav-link-list">
+        
+        
+            
+            
+            
+                
+            
+            
+            
+            <a class="a-block nav-link-item active" href="/posts">
+                Archive
+            </a>
+            
+        
+            
+            
+            
+            
+            
+            <a class="a-block nav-link-item false" href="/categories">
+                Categories
+            </a>
+            
+        
+            
+            
+            
+            
+            
+            <a class="a-block nav-link-item false" href="/tags">
+                Tags
+            </a>
+            
+        
+    </div>
+
+    
+
+    <div class="nav-footer">
+        
+Hugo Theme <a href="https://github.com/amazingrise/hugo-theme-diary">Diary</a> by <a href="https://amazingrise.net">Rise</a>
+<br>
+Ported from <a href="https://mak1t0.cc/" target="_blank" rel="noreferrer noopener">Makito</a>'s <a href="https://github.com/SumiMakito/hexo-theme-journal/" target="_blank" rel="noreferrer noopener">Journal.</a> <br>
+<br>
+
+&copy;
+	
+	Johanna 小贝 and Sophie 筱然 2020.
+	
+    </div>
+    
+</div><div ref="extraContainer" class="extra-container">
+    
+    <div class="toc animated-visibility" :class="{ invisible: scrollY <= 140 }">
+
+
+</div>
+    
+    <div class="pagination">
+        <a id="globalBackToTop" class="pagination-action animated-visibility" href="#top" :class="{ invisible: scrollY == 0 }">
+            <i class="material-icons pagination-action-icon">
+                keyboard_arrow_up
+            </i>
+        </a>
+        
+    </div>
+</div><div class="single-column-drawer-container" ref="drawer"
+     v-bind:class="{ 'single-column-drawer-container-active': isDrawerOpen }">
+    <div class="drawer-content">
+        <div class="drawer-menu">
+            
+            
+                
+                
+                
+                    
+                
+                
+                
+                <a class="a-block drawer-menu-item active" href="/posts">
+                    Archive
+                </a>
+                
+            
+                
+                
+                
+                
+                
+                <a class="a-block drawer-menu-item false" href="/categories">
+                    Categories
+                </a>
+                
+            
+                
+                
+                
+                
+                
+                <a class="a-block drawer-menu-item false" href="/tags">
+                    Tags
+                </a>
+                
+            
+            
+            <div class="toc">
+
+
+</div>
+            
+        </div>
+    </div>
+</div>
+<transition name="fade">
+    <div v-bind:class="{ 'single-column-drawer-mask': mounted }" v-if="isDrawerOpen" v-on:click="toggleDrawer"></div>
+</transition>
+<nav ref="navBar" class="navbar sticky-top navbar-light single-column-nav-container">
+    <div ref="navBackground" class="nav-background"></div>
+    <div class="container container-narrow nav-content">
+        <button id="nav_dropdown_btn" class="nav-dropdown-toggle" type="button" v-on:click="toggleDrawer">
+            <i class="material-icons">
+                menu
+            </i>
+        </button>
+        <a ref="navTitle" class="navbar-brand" href="https://johannabernatzky.github.io">
+            Quarantine Chronicles
+        </a>
+    </div>
+</nav>
+<div class="single-column-header-container" ref="pageHead"
+     v-bind:style="{ transform: 'translateZ(0px) translateY('+.3*scrollY+'px)', opacity: 1-navOpacity }">
+    <a href="https://johannabernatzky.github.io">
+        <div class="single-column-header-title">Quarantine Chronicles</div>
+        
+        <div class="single-column-header-subtitle">疫时写译</div>
+        
+
+    </a>
+</div>
+            <div id="content">
+<div ref="streamContainer" class="stream-container">
+    <div class="post-list-container post-list-container-shadow">
+        <div class="post">
+            
+            
+            
+                
+            
+
+            <div class="post-head-wrapper"
+                 style="background-image: url('/images/wasserfall.jpg')">
+                <div class="post-title">
+                    Day 2: Behind the Waterfall
+                    
+                    <div class="post-subtitle">
+                        第二天：水帘秘境
+                    </div>
+                    
+                    <div class="post-meta">
+                        
+                        <time itemprop="datePublished">
+                            2020-03-25 18:00
+                        </time>
+                        
+
+                        
+                            <i class="material-icons" style="">folder</i>
+                                <a href="/categories/story">Story</a>
+                                &nbsp;
+                        
+
+                        
+                            <i class="material-icons" style="">label</i>
+                            
+                                <a href="/tags/written-by-johanna">written by Johanna</a>
+                                &nbsp;
+                            
+                                <a href="/tags/translated-by-sophie">translated by Sophie</a>
+                                &nbsp;
+                            
+                        
+                    </div>
+                </div>
+            </div>
+            
+            <div class="post-body-wrapper">
+                <div class="post-body">
+                    <p>Pick 5 words at random from different blog posts, tweets, or articles and use them all in a scene. Social distance, tourist attraction, currywurst, cherry blossoms, virtual kiss. 个人空间、景点、咖喱香肠、樱花、隔空亲吻.</p>
+<table>
+<thead>
+<tr>
+<th>English</th>
+<th>中文</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Deep in the mountains, hidden behind a gurgling waterfall, lies a secret land. Only the rarest souls find its entrance. Hikers marvel at the refreshing mist, check a tourist attraction off their list, send their loved ones photographic evidence. #nature #missingyou #virtualkiss. They come in groups, in pairs, with their families, and leave, propelled down the mountain by their desire for a drink, a currywurst with chips, or a soft cushion and the crackle of a fireplace.</td>
+<td>深山里，流水瀑布后，隐藏着一片秘境，其入口鲜为人知。登山者感叹水雾的清新，将此景点在旅行清单上划去，给亲朋好友发送这里的照片，证明自己可是来过这里的。他们将照片传到社交媒体上，标上#亲近自然 #想念你 #隔空亲吻 的话题。来这的游人通常是三五成群，成双成对，与家人出行，来来去去，匆忙下山，只为一杯饮料，一份咖喱香肠和薯条，或是坐在柔软的沙发上，享受壁炉火焰传来的温暖。</td>
+</tr>
+<tr>
+<td>But every once in a while, hikers travel up the path alone. They carry melancholy in their hearts, the world has become heavy for them. They let bird song fill their heads and silence the noise. They seek not inclusion, not pity, they long only for social distance. These hikers may find themselves pulled towards the gush of water, cherishing the biting cold that drives out all thought. And showered in glacial droplets, they may feel a tug at the back of their coat. A soothing stroke of their shoulder. A sudden warm breeze, a light that sets the water curtain ablaze.</td>
+<td>偶尔也会有独行的登山者前来，他们惆怅郁结，心情沉重。他们聆听鸟儿歌唱，摆脱俗世的嘈杂。他们不求融入人群，不需同情，只是想保有自己的个人空间。这些登山客在不知不觉中走到了瀑布前，他们倍感珍惜冲走了沉重思绪的清冷山水。他们感觉到空气里湿润冰冷的水珠，仿佛有什么东西触碰到他们的外衣，轻推了他们的肩膀。一股突如其来的温暖微风，一束光，让水帘变得闪闪发光。</td>
+</tr>
+<tr>
+<td>What they find in the caves nobody knows. Some return in time for the sunset, some are declared missing only to be found one day, wandering a path they have long since forgotten. Memories of their time behind the waterfall vanish the moment they reemerge. What remains is a faint scent of cherry blossoms, the warmth of a summer day and a lightness of the soul.</td>
+<td>无人知晓登山者在山洞里的见闻。有的登山者在日落之前归去，有的则是在秘境中呆的太久，以至于别人都以为他们失踪了，而他们也不记得自己还是如何来到瀑布后的秘境，也不记得在秘境的经历，唯有樱花的微微馨香，夏日的暖意和灵魂深处的轻松犹存。</td>
+</tr>
+</tbody>
+</table>
+<p>Image by Lars Nissen from Pixabay.</p>
+
+                    
+                    <HR width="100%" id="EOF">
+                    <p style="color:#777;">Last modified on 2020-03-25</p>
+                    
+                </div>
+            </div>
+            
+            
+            <nav class="post-pagination">
+
+                
+                <a class="newer-posts" href="https://johannabernatzky.github.io/posts/3-yue-25/">
+                    Next<br>第二天：网红熊猫的诞生
+                </a>
+                
+                
+                
+                <a class="older-posts" href="https://johannabernatzky.github.io/posts/3-yue-24/">
+                    Previous<br>第一天：闭门保命的日子
+                </a>
+                
+            </nav>
+            <div class="post-comment-wrapper">
+                
+
+
+
+
+
+
+            </div>
+        </div>
+    </div>
+</div>
+
+            </div><div id="single-column-footer">
+Hugo Theme <a href="https://github.com/amazingrise/hugo-theme-diary">Diary</a> by <a href="https://amazingrise.net">Rise</a>
+<br>
+Ported from <a href="https://mak1t0.cc/" target="_blank" rel="noreferrer noopener">Makito</a>'s <a href="https://github.com/SumiMakito/hexo-theme-journal/" target="_blank" rel="noreferrer noopener">Journal.</a> <br>
+<br>
+
+&copy;
+	
+	Johanna 小贝 and Sophie 筱然 2020.
+	</div>
+    	</div>
+    <script src="https://johannabernatzky.github.io/js/journal.js"></script>
+    </body>
+</html>

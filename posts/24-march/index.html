@@ -1,0 +1,337 @@
+<!DOCTYPE html>
+<html><head>
+<title>Day 1: But Why Can&#39;t I Go Out?</title>
+
+<meta charset="utf-8">
+<meta name="X-UA-Compatible" content="IE=edge">
+<meta name="google-site-verification" content="">
+<meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport">
+<meta content="telephone=no" name="format-detection">
+<meta name="description" content="第一天：为什么不能出门？">
+<meta name="renderer" content="webkit">
+<meta name="theme-color" content="#ffffff">
+
+
+
+
+<script src="/vendor/js/jquery.min.js" ></script>
+<script src="/vendor/js/popper.min.js" ></script>
+<script src="/vendor/js/bootstrap.min.js" ></script>
+<script src="/vendor/js/smooth-scroll.polyfills.min.js" ></script>
+<link type="text/css" rel="stylesheet" href="/vendor/css/bootstrap.min.css">
+<script src="/vendor/js/vue.min.js" ></script>
+
+
+
+
+<link rel="stylesheet" href="https://johannabernatzky.github.io/scss/journal.min.5c667e74038e21ddbb9024b67930f8544e02af62491281cf73fdb817eec2947e.css" integrity="sha256-XGZ&#43;dAOOId27kCS2eTD4VE4Cr2JJEoHPc/24F&#43;7ClH4=" media="screen">
+
+<script src="https://johannabernatzky.github.io/js/loadCSS.js"></script>
+<script src="https://johannabernatzky.github.io/js/table.js"></script>
+
+
+<script src="https://johannabernatzky.github.io/js/toc.js"></script>
+
+
+<script>
+    loadCSS("https://fonts.googleapis.com/css?family=Lora|Montserrat|Fira+Mono|Noto+Serif+SC|Material+Icons");
+</script>
+
+
+
+
+
+
+</head><body>
+    	<div id="app"><div ref="sideContainer" class="side-container">
+    
+    <a class="a-block nav-head false" href="https://johannabernatzky.github.io">
+    
+        <div class="nav-title">
+            Quarantine Chronicles
+        </div>
+        
+        <div class="nav-subtitle">
+            疫时写译
+        </div>
+        
+    </a>
+
+    <div class="nav-link-list">
+        
+        
+            
+            
+            
+                
+            
+            
+            
+            <a class="a-block nav-link-item active" href="/posts">
+                Archive
+            </a>
+            
+        
+            
+            
+            
+            
+            
+            <a class="a-block nav-link-item false" href="/categories">
+                Categories
+            </a>
+            
+        
+            
+            
+            
+            
+            
+            <a class="a-block nav-link-item false" href="/tags">
+                Tags
+            </a>
+            
+        
+    </div>
+
+    
+
+    <div class="nav-footer">
+        
+Hugo Theme <a href="https://github.com/amazingrise/hugo-theme-diary">Diary</a> by <a href="https://amazingrise.net">Rise</a>
+<br>
+Ported from <a href="https://mak1t0.cc/" target="_blank" rel="noreferrer noopener">Makito</a>'s <a href="https://github.com/SumiMakito/hexo-theme-journal/" target="_blank" rel="noreferrer noopener">Journal.</a> <br>
+<br>
+
+&copy;
+	
+	Johanna 小贝 and Sophie 筱然 2020.
+	
+    </div>
+    
+</div><div ref="extraContainer" class="extra-container">
+    
+    <div class="toc animated-visibility" :class="{ invisible: scrollY <= 140 }">
+
+
+</div>
+    
+    <div class="pagination">
+        <a id="globalBackToTop" class="pagination-action animated-visibility" href="#top" :class="{ invisible: scrollY == 0 }">
+            <i class="material-icons pagination-action-icon">
+                keyboard_arrow_up
+            </i>
+        </a>
+        
+    </div>
+</div><div class="single-column-drawer-container" ref="drawer"
+     v-bind:class="{ 'single-column-drawer-container-active': isDrawerOpen }">
+    <div class="drawer-content">
+        <div class="drawer-menu">
+            
+            
+                
+                
+                
+                    
+                
+                
+                
+                <a class="a-block drawer-menu-item active" href="/posts">
+                    Archive
+                </a>
+                
+            
+                
+                
+                
+                
+                
+                <a class="a-block drawer-menu-item false" href="/categories">
+                    Categories
+                </a>
+                
+            
+                
+                
+                
+                
+                
+                <a class="a-block drawer-menu-item false" href="/tags">
+                    Tags
+                </a>
+                
+            
+            
+            <div class="toc">
+
+
+</div>
+            
+        </div>
+    </div>
+</div>
+<transition name="fade">
+    <div v-bind:class="{ 'single-column-drawer-mask': mounted }" v-if="isDrawerOpen" v-on:click="toggleDrawer"></div>
+</transition>
+<nav ref="navBar" class="navbar sticky-top navbar-light single-column-nav-container">
+    <div ref="navBackground" class="nav-background"></div>
+    <div class="container container-narrow nav-content">
+        <button id="nav_dropdown_btn" class="nav-dropdown-toggle" type="button" v-on:click="toggleDrawer">
+            <i class="material-icons">
+                menu
+            </i>
+        </button>
+        <a ref="navTitle" class="navbar-brand" href="https://johannabernatzky.github.io">
+            Quarantine Chronicles
+        </a>
+    </div>
+</nav>
+<div class="single-column-header-container" ref="pageHead"
+     v-bind:style="{ transform: 'translateZ(0px) translateY('+.3*scrollY+'px)', opacity: 1-navOpacity }">
+    <a href="https://johannabernatzky.github.io">
+        <div class="single-column-header-title">Quarantine Chronicles</div>
+        
+        <div class="single-column-header-subtitle">疫时写译</div>
+        
+
+    </a>
+</div>
+            <div id="content">
+<div ref="streamContainer" class="stream-container">
+    <div class="post-list-container post-list-container-shadow">
+        <div class="post">
+            
+            
+            
+                
+            
+
+            <div class="post-head-wrapper"
+                 style="background-image: url('/images/fireflies.jpg')">
+                <div class="post-title">
+                    Day 1: But Why Can&#39;t I Go Out?
+                    
+                    <div class="post-subtitle">
+                        第一天：为什么不能出门？
+                    </div>
+                    
+                    <div class="post-meta">
+                        
+                        <time itemprop="datePublished">
+                            2020-03-24 10:58
+                        </time>
+                        
+
+                        
+                            <i class="material-icons" style="">folder</i>
+                                <a href="/categories/story">Story</a>
+                                &nbsp;
+                        
+
+                        
+                            <i class="material-icons" style="">label</i>
+                            
+                                <a href="/tags/written-by-johanna">written by Johanna</a>
+                                &nbsp;
+                            
+                                <a href="/tags/translated-by-sophie">translated by Sophie</a>
+                                &nbsp;
+                            
+                        
+                    </div>
+                </div>
+            </div>
+            
+            <div class="post-body-wrapper">
+                <div class="post-body">
+                    <p>Write about a character who's stuck inside. How do they feel about it? Why are they there?</p>
+<table>
+<thead>
+<tr>
+<th>English</th>
+<th>中文</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>“But why can’t I go out mum?” asked the little meerkat. It was barely a few weeks old, silver fluff still covered its fur like cobwebs. A meerkat’s favourite place to be is in the scorching sun. Coming out from the dark tunnels with their twists and turns, the eyes take a while to adjust. Then like a sudden sunrise, the world appears shimmering golden. The little meerkat usually took a while longer to adjust its eyes, then darted after its sister. Together they explored the desert, hiding behind dry logs, jumping over rocks and chasing each other’s shadows.</td>
+<td>“妈妈，为什么我不能出门呀？”小狐獴问。这只小狐獴不过刚出生几周，银色的绒毛像是罩在身上的蜘蛛网一样。狐獴最喜欢晒太阳，他们通常会穿过阴暗似迷宫的地道，爬上地面，总要过一会儿眼睛才能适应外面的光线，如同突如其来的日出，外边的世界散发着金光。这只小狐獴通常要花更长的时间让适应光线，再迅速跟着姐姐。他们一同在沙漠探索，藏身于枯木，在岩石上蹦跶，追逐彼此的影子。</td>
+</tr>
+<tr>
+<td>“Why can’t I go out mum?” The meerkat nudged its mother. It could barely see her, but nuzzled against her side, it could feel her tense her muscles. Crouched down, the mother’s body quivered, her ears laid back, her head turning quickly. Suddenly, a loud screech pierced the dark silence. The mother jolted and pushed the little meerkat behind her. Hidden in the cold burrow, the meerkat was not afraid. It did not yet understand the sharp claws of an eagle, the hot viscosity of blood. Its large eyes betrayed nothing but curiosity. It longed to escape the monotony of the tunnel and bask again in the glorious heat.</td>
+<td>“妈妈，为什么我不能出门呀？”小狐獴继续缠着妈妈。其实小狐獴也看不清妈妈，但还是往她身上蹭蹭，感觉妈妈的肌肉紧绷。狐獴妈妈开始打颤，蜷缩身体，耳朵后缩，马上转过头来。忽然间，一声刺耳的巨响划破了黑暗中的寂静。狐獴妈妈极速将孩子护在身后。躲在冰冷地洞里的小狐獴未有丝毫惊恐，他还不知道若被老鹰锋利的爪子一抓，粘稠的鲜血便喷涌而出。小狐獴瞪大好奇的眼睛，他一直想要逃离枯燥乏味的地道，再次回到灿烂的阳光底下。</td>
+</tr>
+<tr>
+<td>“Can I go out mum?” the little meerkat asked once more, this time knowing it was to no avail. The way out was blocked, the mother’s ears deaf to her children. Restless, the little meerkat turned its head, squinting into the darkness for its sister. But the darkness was lifting. A light was coming towards the meerkat, growing ever bigger. Already it could make out her sister, further down the tunnel, eyes transfixed by the dancing brightness. As if connected by a thread, the two meerkats began moving towards the light. A shape was forming from the glow, a thing with brittle wings holding up a bulb of a body. The little meerkat had never seen such a creature before, tumbling through the air and lighting up the space around it. Suddenly the winged light seemed to startle at the sight of the meerkat children, rushing back into the dark depths.</td>
+<td>“妈妈，我能出门吗？”小狐獴又问了一遍，即便他心知没啥出门的希望了。狐獴妈妈听不见孩子们的声音，而通往外界的路又堵住了。小狐獴莽撞地转头，企图在黑暗中找到自己的姐姐。然而，此时黑暗之中传来一丝亮光。那一点小小的光亮朝着小狐獴飞来，愈发清晰。借着光，小狐獴看到在隧道深处的姐姐。她也目不转睛地盯着跳跃的小光亮。两只小狐獴被那小不点亮光吸引过去，它散发着光芒，有着小小的翅膀。小狐獴从未见过这样的生物，在空中悬着，点亮黑暗。突然，这只小东西被两只小狐獴吓到了，赶紧往黑暗的地洞里飞。</td>
+</tr>
+<tr>
+<td>The two meerkats threw each other a glance and then bolted down the tunnel in pursuit. The air rushed past their ears, blood pumping loudly. The faint afterglow led them along, glittering diamonds lit up the walls beside them. Deeper and deeper they went into the earth, until finally the chase slowed. The spectre of light had exhausted its fragile body. The two meerkats found it resting on a rock, its body flickering in and out of consciousness. The little meerkat glanced at its sister. “We have to bring it out,” it finally said.</td>
+<td>两只狐獴对视一番，马上跟着往地道里飞奔，风声在耳旁呼啸，全身都非常紧张。他们紧随那团微弱的光，而钻石将那团小光折射到了墙壁上，熠熠生辉。他们不断地往洞里钻，直到那只小可怜累了飞不动了，躺在石头上歇息，不断颤抖，没有意识。小狐獴看了看姐姐，最后说，“我们要把它送出去。”</td>
+</tr>
+<tr>
+<td>The meerkat reached out its paw, slowly, slowly, picked up the dying light and placed it gingerly on top of its sister’s head. The way back was long. In the intermittent glow emanating from between its sister’s ears, the little meerkat could see tunnels upon tunnels branching off into the earth. From some of them smells of berries and herbs wound their way out, some of them resounded with scuffling feet. Some of them were black like a tree struck by lightning, some eagerly reflected the passing light. They all felt like adventure, like a promise to be fulfilled.</td>
+<td>小狐獴慢慢，慢慢地伸出小爪子，捡起那束快要熄灭的光芒，小心翼翼地将它安放在姐姐的头上。回到地面的路很漫长。狐獴姐姐头顶上的那点小小的光照亮了前路，让小狐獴看清了错综复杂的地下隧道。他们经过有梅子和香草气味的地道，也听到自己在某一段路途中的脚步声。有一部分的路漆黑一片，犹如被闪电劈断的树木；还有的路反射着微弱的光线。两只狐獴宝宝觉得这段路就是奇妙的探险，像是被实现的心愿。</td>
+</tr>
+<tr>
+<td>As the meerkats walked, the glow grew stronger and stronger. When finally the familiar curve of their mother’s back appeared in front of them, the light hugged each golden hair and sparked off her anxious eyes turning towards her children. She had waited out the danger outside, then had turned her attention back towards them only to discover them gone. Relief washed over her as they appeared, protected as it seemed in a cocoon of light. As soon as they were in reach, she pulled them close into her side and let their scent wash over her.</td>
+<td>狐獴继续向前行走，光线也愈发强烈。最终，他们发现妈妈熟悉的背影，明亮的光线触碰到妈妈金黄的皮毛，让焦虑的妈妈看到自己的孩子们。狐獴妈妈在外面危险结束以后，才发现孩子不见了。现在孩子们都回来了，狐獴妈妈顿时松了一口气。狐獴妈妈抱过走到跟前的孩子们，让自己沾满孩子们的气味。</td>
+</tr>
+<tr>
+<td>When the two meerkats had wound their way out of the tight embrace, the sister lowered her head and showed her mother the wondrous thing they had discovered. The light now seemed abuzz, covering the sister’s head in feathery jumps. The little meerkat looked up at its mother and asked, “Can we bring it out mum?”</td>
+<td>两只狐獴挣脱了妈妈紧紧的拥抱，狐獴姐姐低下头，让妈妈看看他俩发现的这团奇妙美好的小东西。那只发光的小东西有点吵，在狐獴姐姐毛茸茸的头顶上跳跃着。小狐獴抬头望向妈妈，又问：“妈妈，我们可以送它出去吗？”</td>
+</tr>
+</tbody>
+</table>
+<p>Image by Viktoria Borodinova from Pixabay.</p>
+
+                    
+                    <HR width="100%" id="EOF">
+                    <p style="color:#777;">Last modified on 2020-03-24</p>
+                    
+                </div>
+            </div>
+            
+            
+            <nav class="post-pagination">
+
+                
+                <a class="newer-posts" href="https://johannabernatzky.github.io/posts/3-yue-24/">
+                    Next<br>第一天：闭门保命的日子
+                </a>
+                
+                
+                
+                <a class="older-posts">
+                    Previous<br>No older posts.
+                </a>
+                
+            </nav>
+            <div class="post-comment-wrapper">
+                
+
+
+
+
+
+
+            </div>
+        </div>
+    </div>
+</div>
+
+            </div><div id="single-column-footer">
+Hugo Theme <a href="https://github.com/amazingrise/hugo-theme-diary">Diary</a> by <a href="https://amazingrise.net">Rise</a>
+<br>
+Ported from <a href="https://mak1t0.cc/" target="_blank" rel="noreferrer noopener">Makito</a>'s <a href="https://github.com/SumiMakito/hexo-theme-journal/" target="_blank" rel="noreferrer noopener">Journal.</a> <br>
+<br>
+
+&copy;
+	
+	Johanna 小贝 and Sophie 筱然 2020.
+	</div>
+    	</div>
+    <script src="https://johannabernatzky.github.io/js/journal.js"></script>
+    </body>
+</html>
