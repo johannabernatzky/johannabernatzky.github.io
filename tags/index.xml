@@ -7,10 +7,28 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>Johanna 小贝 and Sophie 筱然 2020.</copyright>
-    <lastBuildDate>Fri, 27 Mar 2020 18:00:08 -0400</lastBuildDate>
+    <lastBuildDate>Fri, 27 Mar 2020 18:45:08 -0400</lastBuildDate>
     
 	<atom:link href="https://johannabernatzky.github.io/tags/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>translated by Johanna</title>
+      <link>https://johannabernatzky.github.io/tags/translated-by-johanna/</link>
+      <pubDate>Fri, 27 Mar 2020 18:45:08 -0400</pubDate>
+      
+      <guid>https://johannabernatzky.github.io/tags/translated-by-johanna/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>written by Sophie</title>
+      <link>https://johannabernatzky.github.io/tags/written-by-sophie/</link>
+      <pubDate>Fri, 27 Mar 2020 18:45:08 -0400</pubDate>
+      
+      <guid>https://johannabernatzky.github.io/tags/written-by-sophie/</guid>
+      <description></description>
+    </item>
     
     <item>
       <title>translated by Sophie</title>
@@ -27,24 +45,6 @@
       <pubDate>Fri, 27 Mar 2020 18:00:08 -0400</pubDate>
       
       <guid>https://johannabernatzky.github.io/tags/written-by-johanna/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>translated by Johanna</title>
-      <link>https://johannabernatzky.github.io/tags/translated-by-johanna/</link>
-      <pubDate>Thu, 26 Mar 2020 18:45:08 -0400</pubDate>
-      
-      <guid>https://johannabernatzky.github.io/tags/translated-by-johanna/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>written by Sophie</title>
-      <link>https://johannabernatzky.github.io/tags/written-by-sophie/</link>
-      <pubDate>Thu, 26 Mar 2020 18:45:08 -0400</pubDate>
-      
-      <guid>https://johannabernatzky.github.io/tags/written-by-sophie/</guid>
       <description></description>
     </item>
     
